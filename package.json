@@ -20,20 +20,26 @@
     "@types/node": "20.4.5",
     "@types/react": "18.2.17",
     "@types/react-dom": "18.2.7",
+    "allotment": "^1.19.3",
     "autoprefixer": "10.4.14",
     "dotenv": "^16.3.1",
     "eslint": "8.46.0",
     "eslint-config-next": "13.4.12",
-    "next": "13.4.12",
+    "next": "13.4.19",
     "next-auth": "^4.22.3",
     "postcss": "8.4.27",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-resizable-panels": "^0.0.55",
+    "slate": "^0.94.1",
+    "slate-history": "^0.93.0",
+    "slate-react": "^0.98.3",
     "styled-components": "^5.3.11",
     "tailwindcss": "3.3.3",
     "typescript": "5.1.6"
   },
   "devDependencies": {
+    "@types/quill": "^2.0.11",
     "prisma": "^5.1.1"
   }
 }

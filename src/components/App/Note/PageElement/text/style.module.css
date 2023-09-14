@@ -1,0 +1,6 @@
+.input-element:first-child {
+  padding-top: 0.2rem;
+}
+.input-element:last-child {
+  padding-bottom: 0.2rem;
+}
