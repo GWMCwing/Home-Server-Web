@@ -2,7 +2,7 @@ import { Stack } from '@mui/material';
 import { ReactNode } from 'react';
 import PageElement from '../PageElement';
 
-export default function Splitter({ children, direction }: { children: ReactNode[]; direction: 'row' | 'column' }) {
+export default function PageElement_Splitter({ children, direction }: { children: ReactNode[]; direction: 'row' | 'column' }) {
   //
   const horizontalStyle = {
     width: '100%',
