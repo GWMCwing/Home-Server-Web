@@ -4,6 +4,8 @@ import PageElement from '../PageElement';
 
 export default function PageElement_Splitter({ children, direction }: { children: ReactNode[]; direction: 'row' | 'column' }) {
   //
+  const uuid = crypto.getRandomValues(new Uint32Array(10))[0];
+
   const horizontalStyle = {
     width: '100%',
   };
@@ -14,8 +16,12 @@ export default function PageElement_Splitter({ children, direction }: { children
   return (
     <PageElement>
       <Stack direction={direction} spacing={2}>
-        {children.map((child) => {
-          return <div style={wrapperStyle}>{child}</div>;
+        {children.map((child, i) => {
+          return (
+            <div key={`splitter-${i}-${uuid}`} style={wrapperStyle}>
+              {child}
+            </div>
+          );
         })}
       </Stack>
     </PageElement>

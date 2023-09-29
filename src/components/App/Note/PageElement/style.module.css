@@ -1,6 +1,7 @@
 .page-element {
   padding: 0.125rem;
   position: relative;
+  width: 100%;
   /* box-sizing: border-box; */
 }
 

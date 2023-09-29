@@ -19,7 +19,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   };
   const sideBarPanelRef = useRef<ImperativePanelHandle>(null);
   return (
-    <body style={{ padding: '0', backgroundColor: 'white', height: '100vh', margin: '0' }}>
+    <body style={{ padding: '0', backgroundColor: 'white', minHeight: '100vh', margin: '0' }}>
       <NoteHeader openState={sideBarState} sideBarPanelRef={sideBarPanelRef} />
       <Stack direction="row" height={'100%'}>
         <Container
@@ -32,13 +32,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         >
           <SideBar openState={sideBarState} sideBarPanelRef={sideBarPanelRef} />
         </Container>
-        <div style={{ width: '100%' }}>{children}</div>
+        <div style={{ width: '100%' }}>
+          {children}
+          <div
+            style={{
+              marginBlock: '2rem',
+            }}
+          ></div>
+        </div>
       </Stack>
-      <div
-        style={{
-          marginBlock: '2rem',
-        }}
-      ></div>
     </body>
   );
 }
