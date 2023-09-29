@@ -34,6 +34,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </Container>
         <div style={{ width: '100%' }}>{children}</div>
       </Stack>
+      <div
+        style={{
+          marginBlock: '2rem',
+        }}
+      ></div>
     </body>
   );
 }
