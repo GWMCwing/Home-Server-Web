@@ -4,7 +4,7 @@
   /* box-sizing: border-box; */
 }
 
-.page-element_hoverable:hover {
+.page-element_hoverable:not(:has(.page-element:hover)):hover {
   background-color: #f5f5f5;
   cursor: pointer;
   border-radius: 5px;
