@@ -1,4 +1,5 @@
 'use client';
+import PageElement_Image from '@/components/App/Note/PageElement/image/image';
 import PageElement_Text from '@/components/App/Note/PageElement/text/text';
 import { useSearchParams } from 'next/navigation';
 
@@ -7,8 +8,6 @@ export default function Page({ params: { pageId: fullPageId } }: { params: { pag
   const searchParams = useSearchParams();
   return (
     <>
-      <h1>{fullPageId}</h1>
-      <h2>{pageId}</h2>
       <PageElement_Text
         text={{
           text: 'Hello, world!',
@@ -17,6 +16,7 @@ export default function Page({ params: { pageId: fullPageId } }: { params: { pag
           subType: 'text',
         }}
       />
+      <PageElement_Image url="https://cataas.com/cat" />
     </>
   );
 }

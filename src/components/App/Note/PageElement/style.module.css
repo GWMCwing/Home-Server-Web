@@ -1,5 +1,7 @@
 .page-element {
   padding: 0.5rem;
+  position: relative;
+  /* box-sizing: border-box; */
 }
 
 .page-element_hoverable:hover {

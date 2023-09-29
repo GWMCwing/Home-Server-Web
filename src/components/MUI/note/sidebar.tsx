@@ -17,23 +17,26 @@ export function SideBar({ openState, sideBarPanelRef: panelRef }: { openState: R
     panelRef.current?.resize(0);
   };
   return (
-    <div
-      style={{
-        height: '100%',
-        borderRight: `1px solid grey`,
-        overflow: 'auto',
-      }}
-    >
+    <div>
       <Grid container justifyContent="flex-end">
         <IconButton onClick={handleDrawerClose}>{<ChevronRightIcon />}</IconButton>
       </Grid>
-      <Divider />
-      <List>
+      <Divider
+        sx={{
+          width: '100%',
+        }}
+      />
+      <List
+        sx={{
+          overflow: 'auto',
+          // textOverflow: 'ellipsis',
+        }}
+      >
         {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
           <ListItem key={text} disablePadding>
             <ListItemButton>
               <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-              <Typography>{text}</Typography>
+              <Typography whiteSpace={'nowrap'}>{text}</Typography>
             </ListItemButton>
           </ListItem>
         ))}

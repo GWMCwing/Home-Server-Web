@@ -29,6 +29,7 @@
     "next": "13.4.12",
     "next-auth": "^4.22.3",
     "postcss": "8.4.27",
+    "re-resizable": "^6.9.11",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-resizable-panels": "^0.0.55",
